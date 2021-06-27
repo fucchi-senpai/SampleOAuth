@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A23FE5C026886041004D3B6F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23FE5BF26886041004D3B6F /* LoginViewController.swift */; };
 		A2BBB3142686D3A300353562 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BBB3132686D3A300353562 /* AppDelegate.swift */; };
 		A2BBB3162686D3A300353562 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BBB3152686D3A300353562 /* SceneDelegate.swift */; };
 		A2BBB3182686D3A300353562 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BBB3172686D3A300353562 /* MyPageViewController.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A23FE5BF26886041004D3B6F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A2BBB3102686D3A300353562 /* SampleOAuth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleOAuth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2BBB3132686D3A300353562 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2BBB3152686D3A300353562 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 			children = (
 				A2BBB3172686D3A300353562 /* MyPageViewController.swift */,
 				A2BBB3572686FBCC00353562 /* WebViewController.swift */,
+				A23FE5BF26886041004D3B6F /* LoginViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 				A2BBB3502686DB5000353562 /* UIImage+load.swift in Sources */,
 				A2BBB35B2686FE3900353562 /* UrlInfo.swift in Sources */,
 				A2BBB3582686FBCC00353562 /* WebViewController.swift in Sources */,
+				A23FE5C026886041004D3B6F /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

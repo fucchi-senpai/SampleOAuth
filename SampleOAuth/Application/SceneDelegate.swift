@@ -14,16 +14,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
-        loadSettings { requestParams in
-            DispatchQueue.main.async {
-                guard let windowScene = (scene as? UIWindowScene) else { return }
-                let window = UIWindow(windowScene: windowScene)
-                let url = "https://github.com/login/oauth/authorize?client_id=\(requestParams.githubClientId)&scope=public_repo"
-                window.rootViewController = UINavigationController(rootViewController: WebViewController(urlInfo: UrlInfo(url: url, type: .oauth)))
-                self.window = window
-                window.makeKeyAndVisible()
-            }
-        }
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        let window = UIWindow(windowScene: windowScene)
+        window.rootViewController = UINavigationController(rootViewController: LoginViewController())
+        self.window = window
+        window.makeKeyAndVisible()
         
     }
 
@@ -53,18 +48,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Called as the scene transitions from the foreground to the background.
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
-    }
-    
-    private func loadSettings(completion: @escaping (Params) -> Void) {
-        do {
-            let settingURL: URL = URL(fileURLWithPath: Bundle.main.path(forResource: "settings", ofType: "plist")!)
-            let data = try Data(contentsOf: settingURL)
-            let decoder = PropertyListDecoder()
-            let requestParams = try decoder.decode(Params.self, from: data)
-            completion(requestParams)
-        } catch let error {
-            print("error: \(error)")
-        }
     }
 
 
